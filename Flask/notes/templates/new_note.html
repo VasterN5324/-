@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<header class="p-3 text-bg-dark">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="/" class="nav-link px-2 text-white">Домой</a></li>
+        <li><a href="/notes" class="nav-link px-2 text-white">Просмотреть все заметки</a></li>
+        <li><a href="/new-note" class="nav-link px-2 text-secondary">Создать новую заметку</a></li>
+      </ul>
+
+      <div class="text-end">
+        <l1><a href ="/register" class="btn btn-warning">Зарегистрироваться</a></l1>
+        <l1><a href ="/login" class="btn btn-outline-light me-2">Войти</a></l1>
+      </div>
+    </div>
+  </div>
+</header>
+
+  {% endblock %}
+
+{% block title %}
+Заметки
+{% endblock %}
+
+
+{% block body%}
+<div class="container mt-5">
+  <h1>Создание заметки</h1>
+  <form method="post">
+
+    <input type="text" name="title" id="title" class="form-control" placeholder="Тут может быть название Вашей новой заметки..."><br>
+    <textarea name="text" id="text" class="form-control" placeholder="Напишите сюда,чтобы не забыть"></textarea><br>
+    <input type="submit"  class="btn btn-success" value="Сохранить"><br>
+  </form>
+</div>    
+{% endblock %}
